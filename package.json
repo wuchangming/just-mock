@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/wuchangming/just-mock/issues"
   },
-  "homepage": "https://github.com/wuchangming/just-mock#readme"
+  "homepage": "https://github.com/wuchangming/just-mock#readme",
+  "devDependencies": {
+    "lerna": "^2.11.0"
+  }
 }
