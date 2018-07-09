@@ -7,7 +7,7 @@
 库: JSON5, prettier
 
 ## 控制台
-库: Electron
+库: Electron  
 要求: 支持restful, 支持收藏组
 
 ## 拦截脚本

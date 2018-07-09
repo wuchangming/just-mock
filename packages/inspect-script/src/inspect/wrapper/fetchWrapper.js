@@ -1,4 +1,4 @@
-import { WRAPPED_FLAG } from '../constants'
+import WRAPPED_FLAG from '../constants/WRAPPED_FLAG'
 
 // modify the whatwg-fetch@2.0.4: https://github.com/github/fetch
 ;(function(self) {

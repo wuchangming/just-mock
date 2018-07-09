@@ -1,4 +1,4 @@
-import { WRAPPED_FLAG } from '../constants'
+import WRAPPED_FLAG from '../constants/WRAPPED_FLAG'
 import nomalizeUrl from '../utils/nomalizeUrl'
 
 // Inspired by:
@@ -7,7 +7,7 @@ import nomalizeUrl from '../utils/nomalizeUrl'
 
 export default mockServerUrl => {
     const xhr = window.XMLHttpRequest
-    
+
     // if (xhr && !xhr[WRAPPED_FLAG]) {
     //     window.justMockBackup = {
     //         realXHR: xhr
