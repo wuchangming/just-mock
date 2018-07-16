@@ -1,4 +1,10 @@
-export default function createNativeXMLHttpRequest() {
+export const backupXHR = () => {
+    window.justMockBackup = {
+        XMLHttpRequest: window.XMLHttpRequest,
+        ActiveXObject: window.ActiveXObject
+    }
+}
+export const createNativeXHR = () => {
     var isLocal = (function() {
         var rlocalProtocol = /^(?:about|app|app-storage|.+-extension|file|res|widget):$/
         var rurl = /^([\w.+-]+:)(?:\/\/([^\/?#:]*)(?::(\d+)|)|)/

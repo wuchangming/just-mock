@@ -1,0 +1,14 @@
+<html>
+<head>
+    <script src="../dist/inspect/index.js"></script>
+    <script>
+        var xhr = new XMLHttpRequest()
+        xhr.open('GET', location.href, false)
+        xhr.send({key: 1})
+        xhr.open('post', location.href, true)
+        xhr.send({key: 2})
+    </script>
+</head>
+<body>
+</body>
+</html>

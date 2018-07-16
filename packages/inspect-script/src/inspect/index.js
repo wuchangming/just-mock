@@ -1,7 +1,8 @@
+import 'babel-polyfill'
 import './wrapper/fetchWrapper'
-import DEFAULT_MOCK_SERVER_URL from './constants/DEFAULT_MOCK_SERVER_URL'
 import XMLHttpRequestWrapper from './wrapper/XMLHttpRequestWrapper'
-import JustMockXHR from './wrapper/JustMockXHR.js'
+import JustMockXHR from './wrapper/JustMockXHR'
+import { backupXHR } from './utils/backupXHR'
 
 /*
     PhantomJS
@@ -19,9 +20,6 @@ try {
     }
 }
 // 备份原生 XMLHttpRequest
-window.justMockBackup = {
-    XMLHttpRequest: window.XMLHttpRequest,
-    ActiveXObject: window.ActiveXObject
-}
+backupXHR()
 
-window.JustMockXHR = JustMockXHR
+window.XMLHttpRequest = JustMockXHR
