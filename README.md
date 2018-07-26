@@ -1,6 +1,10 @@
 # just-mock
 Zero configuration, Dynamic local dev mock server
 
+## develop
+```
+npx lerna init
+```
 
 ## PLAN
 ### inspect-script ☑️
