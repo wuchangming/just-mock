@@ -13,7 +13,18 @@ const createFormBody = body => {
     return str
 }
 
+const NOT_MATCH = { isMatch: false }
+
 export default function isMatchMock(openParams, done) {
+    // test code
+    // console.log(openParams);
+    // if (openParams.method === 'POST') {
+    //     done(true)
+    // } else {
+    //     done(false)
+    // }
+    // return
+    // test code
     const url = nomalizeUrl(openParams.url)
     const { async = true, method } = openParams
     const realXHR = createNativeXHR()
@@ -41,15 +52,15 @@ export default function isMatchMock(openParams, done) {
             )
             try {
                 const res = JSON.parse(realXHR.response)
-                doneOnce(!!res.isMatch)
+                doneOnce(res)
             } catch (e) {
                 console.error(`cannot connect to just-mock server!`)
-                doneOnce(false)
+                doneOnce(NOT_MATCH)
             }
         } catch (e) {
             // handle sync
             console.error('cannot connect to just-mock server!')
-            doneOnce(false)
+            doneOnce(NOT_MATCH)
         }
     } else {
         realXHR.onreadystatechange = function(oEvent) {
@@ -57,14 +68,14 @@ export default function isMatchMock(openParams, done) {
                 if (realXHR.status >= 200 && realXHR.status < 300) {
                     try {
                         const res = JSON.parse(realXHR.response)
-                        doneOnce(!!res.isMatch)
+                        doneOnce(res)
                     } catch (e) {
                         console.error(`cannot connect to just-mock server!`)
-                        doneOnce(false)
+                        doneOnce(NOT_MATCH)
                     }
                 } else {
                     console.error(`cannot connect to just-mock server!`)
-                    doneOnce(false)
+                    doneOnce(NOT_MATCH)
                 }
             }
         }

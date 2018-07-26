@@ -2,12 +2,30 @@
 <head>
     <script src="../dist/inspect/index.js"></script>
     <script>
-        var xhr = new XMLHttpRequest()
-        xhr.open('GET', location.href, false)
-        xhr.send({key: 1})
-        xhr.open('post', location.href, true)
-        xhr.send({key: 2})
-    </script>
+    var xhr = new XMLHttpRequest()
+    xhr.open(
+        'GET',
+        'http://elis-ecocdn.pingan.com.cn/elis_smp_pss_dmz/pss/dist/fallback/vendor.e4f764ddd46b08d37f90.js',
+        false
+    )
+    xhr.onload = function () {
+        console.log('xhr.readyState', xhr.readyState); // readyState will be 4
+    };
+    xhr.send('111')
+    // xhr.send('111')
+
+
+    var xhr2 = new XMLHttpRequest()
+    xhr2.open(
+        'POST',
+        'https://als.cdn.lifeapp.pingan.com.cn/ph/webcache/preload.json',
+        false
+    )
+    xhr2.onload = function () {
+        console.info('DONE', xhr2.response); // readyState will be 4
+    };
+    xhr2.send('222')
+</script>
 </head>
 <body>
 </body>

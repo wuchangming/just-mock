@@ -1,0 +1,28 @@
+<html>
+<head>
+<script src="../dist/inspect/index.js"></script>
+<script src="./libs/jquery-3.3.1.min.js"></script>
+<script>
+$.ajax({
+    url: 'https://als.cdn.lifeapp.pingan.com.cn/ph/webcache/preload.json',
+    error(response, textStatus, errorThrown) {
+        console.error(response, textStatus, errorThrown)
+    },
+    success: function(res) {
+        console.log(res)
+    }
+})
+$.ajax({
+    url: 'https://als.cdn.lifeapp.pingan.com.cn/ph/webcache/preload.jsonx',
+    error(response, textStatus, errorThrown) {
+        console.error(response, textStatus, errorThrown)
+    },
+    success: function(res) {
+        console.log(res)
+    }
+})
+</script>
+</head>
+<body>
+</body>
+</html>

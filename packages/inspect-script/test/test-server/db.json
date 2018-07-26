@@ -1,5 +1,10 @@
 {
     "is-match-mock": {
-        "isMatch": true
+        "isMatch": true,
+        "respondInfo": {
+            "status": 200,
+            "header": { "Content-Type": "application/json" },
+            "body": "{\"test\":1}"
+        }
     }
 }

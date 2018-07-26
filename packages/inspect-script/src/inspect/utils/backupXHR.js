@@ -13,19 +13,23 @@ export const createNativeXHR = () => {
         return rlocalProtocol.test(ajaxLocParts[1])
     })()
 
-    return window.ActiveXObject
+    return window.justMockBackup.ActiveXObject
         ? (!isLocal && createStandardXHR()) || createActiveXHR()
         : createStandardXHR()
 
     function createStandardXHR() {
         try {
             return new window.justMockBackup.XMLHttpRequest()
-        } catch (e) {}
+        } catch (e) {
+            console.log(e);
+        }
     }
 
     function createActiveXHR() {
         try {
             return new window.justMockBackup.ActiveXObject('Microsoft.XMLHTTP')
-        } catch (e) {}
+        } catch (e) {
+            console.log(e);
+        }
     }
 }
