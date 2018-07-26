@@ -16,15 +16,6 @@ const createFormBody = body => {
 const NOT_MATCH = { isMatch: false }
 
 export default function isMatchMock(openParams, done) {
-    // test code
-    // console.log(openParams);
-    // if (openParams.method === 'POST') {
-    //     done(true)
-    // } else {
-    //     done(false)
-    // }
-    // return
-    // test code
     const url = nomalizeUrl(openParams.url)
     const { async = true, method } = openParams
     const realXHR = createNativeXHR()
