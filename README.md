@@ -2,10 +2,11 @@
 Zero configuration, Dynamic local dev mock server
 
 
-## inspect-script ☑️
+## PLAN
+### inspect-script ☑️
 - XMLHttpRequest ✅
 - browser fetch ✅
 - React Native fetch ☑️
 - jsonp ☑️
 
-# desktop-app ☑️
+### desktop-app ☑️
