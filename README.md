@@ -10,3 +10,5 @@ Zero configuration, Dynamic local dev mock server
 - jsonp ☑️
 
 ### desktop-app ☑️
+- MacOS ☑️
+- Windows ☑️
