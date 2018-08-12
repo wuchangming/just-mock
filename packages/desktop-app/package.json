@@ -1,31 +1,16 @@
 {
-  "name": "just-mock",
-  "version": "0.0.1",
-  "description": "",
-  "main": "main.js",
+  "name": "desktop-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "react-scripts": "1.1.4"
+  },
   "scripts": {
-    "start": "electron .",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "wuchangming",
-  "license": "MIT",
-  "build": {
-    "appId": "com.JustMock.app",
-    "productName": "JustMock",
-    "directories": {
-      "output": "packages",
-      "app": "./"
-    },
-    "mac": {
-      "target": "dmg",
-      "type": "distribution",
-      "artifactName": "mockoon.setup.${version}.${ext}"
-    }
-  },
-  "devDependencies": {
-    "create-react-app": "^1.5.2",
-    "electron": "^2.0.5",
-    "electron-builder": "^20.26.0",
-    "electron-window-state": "^4.1.1"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
   }
 }
