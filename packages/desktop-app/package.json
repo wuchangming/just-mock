@@ -1,5 +1,5 @@
 {
-  "name": "desktop-app",
+  "name": "just-mock",
   "version": "0.0.1",
   "description": "",
   "main": "main.js",
@@ -9,7 +9,23 @@
   },
   "author": "wuchangming",
   "license": "MIT",
+  "build": {
+    "appId": "com.JustMock.app",
+    "productName": "JustMock",
+    "directories": {
+      "output": "packages",
+      "app": "./"
+    },
+    "mac": {
+      "target": "dmg",
+      "type": "distribution",
+      "artifactName": "mockoon.setup.${version}.${ext}"
+    }
+  },
   "devDependencies": {
-    "electron": "^2.0.3"
+    "create-react-app": "^1.5.2",
+    "electron": "^2.0.5",
+    "electron-builder": "^20.26.0",
+    "electron-window-state": "^4.1.1"
   }
 }
